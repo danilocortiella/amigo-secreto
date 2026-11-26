@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amigo Secreto da Família</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <span class="hero-badge">🎁 Amigo Secreto da Família</span>
+      <h1>Lista de Presentes</h1>
+      <p>Escolha quem você tirou para ver apenas as sugestões, tamanhos, cores e links dessa pessoa.</p>
+    </header>
+
+    <section class="selector-card" aria-label="Selecionar participante">
+      <label for="person-select" class="selector-label">Quem você tirou?</label>
+      <div class="select-wrapper">
+        <select id="person-select" disabled>
+          <option value="">Carregando participantes...</option>
+        </select>
+      </div>
+      <div id="status-message" class="status-message" role="status"></div>
+    </section>
+
+    <section id="results-section" class="results-section" hidden>
+      <div class="results-header">
+        <h2 id="selected-person-name"></h2>
+        <span id="items-count" class="items-count"></span>
+      </div>
+      <div id="gift-list" class="gift-list"></div>
+    </section>
+
+    <footer class="footer">
+      <p>Atualizado automaticamente pela planilha do grupo.</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
